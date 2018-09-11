@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FilterLab - FullSlap Developer</title>
     <link rel="stylesheet" href="./src/styles.css">
-    <link rel="stylesheet" href="./src/main.js">
 </head>
 
 <body>
@@ -22,7 +21,7 @@
         <div class='column'>
             <div id="imageViewer" class='item imageViewer'>
                 <figure>
-                    <img src="./src/images/batman-and-robin.jpg" class="filter">
+                    <img id="imagePreviewer" src="./src/images/batman-and-robin.jpg" class="filter">
                 </figure>
 
                 <button id="saveBtn" href="#">Save Image</button>
@@ -31,7 +30,7 @@
                 <h2>Controls</h2>
                 <div class="slider">
                     <label for="blurInput">Blur</label>
-                    <input id="blurInput" class="range" type="range" data-functioname="blur" data-param="%s" value="0" step="1" min="0" max="10">
+                    <input id="blurInput" class="range" type="range" data-functioname="blur" data-param="%spx" value="0" step="1" min="0" max="10">
                 </div>
 
                 <div class="slider">
@@ -41,15 +40,44 @@
 
                 <div class="slider">
                     <label for="dropShadowInput">Drop shadow</label>
-                    <input id="dropShadowInput" class="range" type="range" data-functioname="drop-shadow" data-param="%spx %spx 20px white'" value="0" step="1" min="0" max="100">
+                    <input id="dropShadowInput" class="range" type="range" data-functioname="drop-shadow" data-param="%spx %spx 20px white" value="0" step="1" min="0" max="100">
                 </div>
 
                 <div class="slider">
                     <label for="sepiaInput">Sepia</label>
-                    <input id="dropShadowInput" class="range" type="range" data-functioname="drop-shadow" data-param="%spx %spx 20px white'" value="0" step="1" min="0" max="100">
-                </div>
-                
-            </div>            
+                    <input id="sepiaInput" class="range" type="range" data-functioname="sepia" data-param="%s" value="0" step="0.1" min="0" max="1">
+				</div>
+
+				<div class="slider">
+                    <label for="brightnessInput">Brightness</label>
+                    <input id="brightnessInput" class="range" type="range" data-functioname="brightness" data-param="%s" value="0" step="0.1" min="0" max="10">
+				</div>
+
+				<div class="slider">
+                    <label for="contrastInput">Contrast</label>
+                    <input id="contrastInput" class="range" type="range" data-functioname="contrast" data-param="%s" value="0" step="0.1" min="0" max="10">
+				</div>
+
+				<div class="slider">
+                    <label for="hue-rotateInput">Hue-rotate</label>
+                    <input id="hue-rotateInput" class="range" type="range" data-functioname="hue-rotate" data-param="%sdeg" value="0" step="10" min="0" max="360">
+				</div>
+
+				<div class="slider">
+                    <label for="invertInput">Invert</label>
+                    <input id="invertInput" class="range" type="range" data-functioname="invert" data-param="%s" value="0" step="0.1" min="0" max="1">
+				</div>
+
+                <div class="slider">
+                    <label for="saturateInput">Saturate</label>
+                    <input id="saturateInput" class="range" type="range" data-functioname="saturate" data-param="%s" value="0" step="0.1" min="0" max="10">
+				</div>
+
+				<div class="slider">
+                    <label for="opacityInput">Opacity</label>
+                    <input id="opacityInput" class="range" type="range" data-functioname="opacity" data-param="%s" value="0" step="0.1" min="0" max="1">
+				</div>
+            </div>
         </div>
 
         <div class='column'>
@@ -59,10 +87,10 @@
                     &lt;img src="..."" class="filter" &gt;
                 </code>
             </div>
-            <div id="cssOutput" class='item cssOutput'>
+            <div class='item cssOutput'>
                 <h2>CSS</h2>
                 <pre>
-                    <code id="code"></code>
+                    <code id="cssOutput"></code>
                 </pre>
             </div>
         </div>
@@ -70,7 +98,9 @@
 
     <footer class="footer">
         Built by @fullslapdeveloper
-    </footer>
+	</footer>
+
+	<script type="application/javascript" src="./src/main.js"></script>
 </body>
 
 </html>

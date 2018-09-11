@@ -12,12 +12,14 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     text-align: center;
-    font-family: sans-serif;
+	font-family: sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 .header {
     background: var(--main-color);
     top: 0;
-    position: sticky;
+	position: sticky;
+	z-index: 1;
 }
 h1 {
     margin-bottom: 0;
@@ -32,7 +34,10 @@ h1 {
 
 .footer {
     bottom: 0;
-    position: static;
+	position: static;
+	margin: 30px 0;
+	font-style: italic;
+	font-weight: 300;
 }
 
 .dashboard {
@@ -56,7 +61,7 @@ h1 {
     flex-grow: 1;
 
     min-width: 250px;
-    padding: 25px 10px;
+    padding: 25px;
 }
 
 figure {
@@ -90,7 +95,11 @@ button {
 
 code {
     background: var(--main-color);
-    padding: 10px 20px;
+	width: 100%;
+    padding: 20px;
+    margin: auto;
+	display: block;
+	text-align: left;
 }
 
 .dashboard {
@@ -107,14 +116,13 @@ label {
 
 .range {
     -webkit-appearance: none;
-    
+
     width: 65%
 }
 
 .range::-webkit-slider-runnable-track {
     background: #434751;
     border: 0;
-    border-radius: 3px;
     height: 2px;
 }
 
