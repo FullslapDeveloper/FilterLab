@@ -1,0 +1,134 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    --main-color: #0E131A;
+    --hightlight: #8850F6;
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+    color: #F8F9FA;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    font-family: sans-serif;
+}
+.header {
+    background: var(--main-color);
+    top: 0;
+    position: sticky;
+}
+h1 {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+.header__gradient {
+    background: linear-gradient(270deg, #8748FA 10%, #e041cc, #E68DB4 90%);
+    display: block;
+    height: 5px;
+    width: 100%;
+}
+
+.footer {
+    bottom: 0;
+    position: static;
+}
+
+.dashboard {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 200px;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: #191F28;
+    margin: 10px;
+    flex-grow: 1;
+
+    min-width: 250px;
+    padding: 25px 10px;
+}
+
+figure {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+    margin: 0 auto;
+}
+img,
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: var(--hightlight);
+    border: 0;
+    border-bottom: 2px solid #6c3fc6;
+    cursor: pointer;
+    box-shadow: inset 0 -2px #6c3fc6;
+}
+
+code {
+    background: var(--main-color);
+    padding: 10px 20px;
+}
+
+.dashboard {
+    min-height: 100vh;
+}
+
+label {
+    width: 110px;
+    display: inline-block;
+}
+.slider {
+    margin-bottom: 15px;
+}
+
+.range {
+    -webkit-appearance: none;
+    
+    width: 65%
+}
+
+.range::-webkit-slider-runnable-track {
+    background: #434751;
+    border: 0;
+    border-radius: 3px;
+    height: 2px;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #9c5ad8;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 16px;
+    margin-top: -6px;
+    width: 16px
+}
+
+.range:focus {
+    outline: none
+}

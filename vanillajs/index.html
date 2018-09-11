@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FilterLab - FullSlap Developer</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/main.js">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__gradient"></div>
+        <div class="content">
+            <h1>FilterLab</h1>
+        </div>
+    </header>
+
+    <div class='dashboard'>
+        <div class='column'>
+            <div id="imageViewer" class='item imageViewer'>
+                <figure>
+                    <img src="./src/images/batman-and-robin.jpg" class="filter">
+                </figure>
+
+                <button id="saveBtn" href="#">Save Image</button>
+            </div>
+            <div id="slidersControl" class='item controls'>
+                <h2>Controls</h2>
+                <div class="slider">
+                    <label for="blurInput">Blur</label>
+                    <input id="blurInput" class="range" type="range" data-functioname="blur" data-param="%s" value="0" step="1" min="0" max="10">
+                </div>
+
+                <div class="slider">
+                    <label for="grayscaleInput">Grayscale</label>
+                    <input id="grayscaleInput" class="range" type="range" data-functioname="grayscale" data-param="%s" value="0" step="0.1" min="0" max="1">
+                </div>
+
+                <div class="slider">
+                    <label for="dropShadowInput">Drop shadow</label>
+                    <input id="dropShadowInput" class="range" type="range" data-functioname="drop-shadow" data-param="%spx %spx 20px white'" value="0" step="1" min="0" max="100">
+                </div>
+
+                <div class="slider">
+                    <label for="sepiaInput">Sepia</label>
+                    <input id="dropShadowInput" class="range" type="range" data-functioname="drop-shadow" data-param="%spx %spx 20px white'" value="0" step="1" min="0" max="100">
+                </div>
+                
+            </div>            
+        </div>
+
+        <div class='column'>
+            <div id="" class='item'>
+                <h2>Markup</h2>
+                <code>
+                    &lt;img src="..."" class="filter" &gt;
+                </code>
+            </div>
+            <div id="cssOutput" class='item cssOutput'>
+                <h2>CSS</h2>
+                <pre>
+                    <code id="code"></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Built by @fullslapdeveloper
+    </footer>
+</body>
+
+</html>
